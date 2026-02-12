@@ -3,623 +3,238 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Keith S. Grybowski for Charleston County School Board (District 1)</title>
-  <meta name="description" content="Protect progress. Deliver results. Keith S. Grybowski for Charleston County School Board, District 1 (Mount Pleasant)." />
-
-  <style>
-    :root{
-      --bg:#ffffff;
-      --text:#0f172a;
-      --muted:#475569;
-      --line:#e2e8f0;
-      --card:#f8fafc;
-      --accent:#0b5fff;
-      --accent2:#063a99;
-      --good:#0f766e;
-      --shadow: 0 10px 20px rgba(2,8,23,.08);
-      --radius: 18px;
-      --max: 1100px;
-      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:var(--font);
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.5;
-    }
-    a{color:inherit}
-    .container{max-width:var(--max); margin:0 auto; padding:0 18px;}
-    .topbar{
-      position:sticky; top:0; z-index:50;
-      background:rgba(255,255,255,.92);
-      backdrop-filter:saturate(180%) blur(10px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:12px 0;
-      gap:12px;
-    }
-    .brand{
-      display:flex; flex-direction:column; gap:2px;
-      text-decoration:none;
-    }
-    .brand strong{font-size:16px; letter-spacing:.2px;}
-    .brand span{font-size:12px; color:var(--muted);}
-    .navlinks{
-      display:flex; align-items:center; gap:10px; flex-wrap:wrap;
-    }
-    .navlinks a{
-      text-decoration:none;
-      font-size:14px;
-      color:var(--muted);
-      padding:8px 10px;
-      border-radius:999px;
-    }
-    .navlinks a:hover{background:var(--card); color:var(--text);}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      border-radius:999px;
-      padding:12px 16px;
-      font-weight:700;
-      text-decoration:none;
-      border:1px solid transparent;
-      cursor:pointer;
-      user-select:none;
-      white-space:nowrap;
-    }
-    .btn.primary{background:var(--accent); color:white;}
-    .btn.primary:hover{background:var(--accent2);}
-    .btn.ghost{
-      background:white; border-color:var(--line); color:var(--text);
-    }
-    .btn.ghost:hover{background:var(--card);}
-    .hero{
-      padding:38px 0 14px;
-      border-bottom:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(11,95,255,.06), rgba(255,255,255,0));
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:22px;
-      align-items:start;
-    }
-    h1{
-      margin:0 0 10px;
-      font-size:40px;
-      line-height:1.1;
-      letter-spacing:-.5px;
-    }
-    .subhead{
-      color:var(--muted);
-      font-size:16px;
-      max-width:60ch;
-      margin:0 0 18px;
-    }
-    .cta-row{display:flex; gap:10px; flex-wrap:wrap; margin: 6px 0 10px;}
-    .credline{color:var(--muted); font-size:13px; margin-top:10px;}
-    .hero-card{
-      background:white;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-    .ph-img{
-      width:100%;
-      aspect-ratio: 4/3;
-      background:
-        linear-gradient(135deg, rgba(11,95,255,.18), rgba(15,118,110,.12)),
-        repeating-linear-gradient(45deg, rgba(255,255,255,.0) 0, rgba(255,255,255,.0) 12px, rgba(255,255,255,.35) 12px, rgba(255,255,255,.35) 24px);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:14px;
-      text-align:center;
-      color:var(--accent2);
-      font-weight:800;
-      border-bottom:1px solid var(--line);
-    }
-    .hero-card .pad{padding:14px;}
-    .mini{
-      display:grid;
-      gap:10px;
-      font-size:14px;
-      color:var(--muted);
-    }
-    .mini strong{color:var(--text)}
-    .section{padding:34px 0; border-bottom:1px solid var(--line);}
-    .section h2{margin:0 0 10px; font-size:26px; letter-spacing:-.3px;}
-    .lead{color:var(--muted); margin:0 0 16px; max-width:75ch;}
-    .grid-2{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:16px;
-      align-items:start;
-    }
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:16px;
-    }
-    .cards-4{
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap:12px;
-    }
-    .tile{
-      background:white;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:14px;
-      box-shadow:0 6px 14px rgba(2,8,23,.05);
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
-    }
-    .icon{
-      width:36px; height:36px;
-      border-radius:12px;
-      background:rgba(11,95,255,.10);
-      border:1px solid rgba(11,95,255,.20);
-      display:flex; align-items:center; justify-content:center;
-      font-size:18px;
-      flex:0 0 auto;
-    }
-    .tile h3{margin:0 0 4px; font-size:15px;}
-    .tile p{margin:0; color:var(--muted); font-size:13px;}
-    .list{
-      margin:0; padding-left:18px;
-      color:var(--muted);
-    }
-    .list li{margin:8px 0;}
-    .ph-wide{
-      aspect-ratio: 16/9;
-      border-radius: var(--radius);
-      border:1px solid var(--line);
-      background:
-        linear-gradient(135deg, rgba(15,118,110,.12), rgba(11,95,255,.10)),
-        repeating-linear-gradient(45deg, rgba(255,255,255,.0) 0, rgba(255,255,255,.0) 14px, rgba(255,255,255,.32) 14px, rgba(255,255,255,.32) 28px);
-      display:flex; align-items:center; justify-content:center;
-      color:var(--good);
-      font-weight:800;
-      text-align:center;
-      padding:16px;
-    }
-    details{
-      background:white;
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:12px 14px;
-    }
-    details + details{margin-top:10px;}
-    summary{
-      cursor:pointer;
-      font-weight:800;
-    }
-    footer{
-      padding:26px 0 44px;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .footer-grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:12px;
-      align-items:start;
-    }
-    .small{font-size:12px;}
-    .form-row{
-      display:flex; gap:10px; flex-wrap:wrap;
-      margin-top:10px;
-    }
-    input[type="text"], input[type="email"]{
-      width:min(340px, 100%);
-      padding:12px 12px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      font-size:14px;
-      outline:none;
-    }
-    input:focus{border-color: rgba(11,95,255,.45); box-shadow:0 0 0 4px rgba(11,95,255,.12);}
-
-    @media (max-width: 920px){
-      .hero-grid{grid-template-columns:1fr; }
-      .cards-4{grid-template-columns: repeat(2, 1fr);}
-      .grid-2, .footer-grid{grid-template-columns:1fr;}
-      h1{font-size:34px;}
-    }
-    @media (max-width: 520px){
-      .cards-4{grid-template-columns:1fr;}
-      .navlinks{display:none;}
-      h1{font-size:30px;}
-    }
-  </style>
+  <title>Keith S. Grybowski for School Board</title>
+  <meta name="description" content="Keith S. Grybowski for Charleston County School Board, District 1 (Mount Pleasant). Protect progress. Deliver results." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
   <div class="topbar">
     <div class="container">
       <div class="nav" role="navigation" aria-label="Primary">
-        <a class="brand" href="#home">
+        <a class="brand" href="index.html">
           <strong>Keith S. Grybowski</strong>
           <span>Charleston County School Board • District 1 (Mount Pleasant)</span>
         </a>
 
         <div class="navlinks" aria-label="Site links">
-          <a href="#why">Why I’m Running</a>
-          <a href="#results">Results</a>
-          <a href="#priorities">Priorities</a>
-          <a href="#about">About</a>
-          <a href="#issues">Issues</a>
-          <a href="#support">Support</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+          <a href="index.html#why">Why</a>
+          <a href="index.html#results">Results</a>
+          <a href="index.html#priorities">Priorities</a>
+          <a href="about.html">About</a>
+          <a href="issues.html">Issues</a>
+          <a href="support.html">Support</a>
+          <a href="fundraiser.html">Fundraiser</a>
+          <a href="index.html#contact">Contact</a>
         </div>
 
         <div style="display:flex; gap:8px; align-items:center;">
-          <a class="btn ghost" href="#join">Join the Campaign</a>
-          <a class="btn primary" href="#support">Support the Work</a>
+          <a class="btn ghost" href="support.html#join">Join</a>
+          <a class="btn primary" href="support.html#contribute">Support</a>
         </div>
       </div>
     </div>
   </div>
 
-  <header id="home" class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div>
-          <h1>Protect progress. Deliver results.</h1>
-
-          <p class="subhead">
-            I’m Keith S. Grybowski, Charleston County School Board Trustee for District 1.
-            After 30+ years working with our school district—and the last four as a Trustee—our schools have made
-            some of the strongest progress we’ve seen: stronger results, stronger teacher support and retention,
-            and stronger financial stewardship.
-            <br /><br />
-            I’m running to keep that momentum going and meet the next challenge: getting students to want to be in school
-            and helping parents trust the value our schools deliver.
-          </p>
-
-          <div class="cta-row">
-            <a class="btn primary" href="#join">Join the Campaign</a>
-            <a class="btn ghost" href="#support">Support the Work</a>
-            <a class="btn ghost" href="#volunteer">Volunteer</a>
-          </div>
-
-          <div class="credline">Record of results. Clear priorities. Independent leadership.</div>
-        </div>
-
-        <aside class="hero-card" aria-label="Campaign photo and highlights">
-          <div class="ph-img">
-            PHOTO PLACEHOLDER: Keith headshot<br/>
-            <span class="small">(Replace this box with a real campaign photo.)</span>
-          </div>
-          <div class="pad">
-            <div class="mini">
-              <div><strong>Current role:</strong> Trustee, District 1</div>
-              <div><strong>Home:</strong> Mount Pleasant (30-year resident)</div>
-              <div><strong>Focus:</strong> Results, teachers, and responsible spending</div>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </header>
-
-  <section id="why" class="section">
-    <div class="container">
-      <h2>Why I’m running</h2>
-      <p class="lead">
-        I’m running because Charleston County is on the right track—and we can’t afford to go backward.
-      </p>
-
-      <div class="grid-2">
-        <div class="card">
-          <p style="margin:0; color:var(--muted);">
-            In the last four years, our district has made historic gains in academic momentum,
-            teacher support and retention, and financial stability. We’ve earned recognition across
-            the state and nationally because we’ve insisted on measurable results and responsible spending.
-            <br/><br/>
-            But progress attracts noise. When you demand accountability, some interests prefer the old way—
-            more politics, less transparency, and spending that doesn’t clearly benefit students.
-          </p>
-        </div>
-
-        <div class="card">
-          <p style="margin:0; color:var(--muted);">
-            One clear difference in this race is leadership: I support strong, proven administration.
-            We fought hard to recruit and retain a homegrown Superintendent who is widely recognized for excellence,
-            and I won’t join efforts to undermine effective leadership for political reasons.
-            <br/><br/>
-            I’m running to keep our focus where it belongs—classrooms, teachers, and outcomes—and to tackle what’s next:
-            improving attendance and strengthening parent confidence in our schools.
-          </p>
-
-          <p style="margin:14px 0 0; font-weight:800;">
-            If you believe progress is worth protecting, I’d be honored to earn your support—
-            whether that’s your time, your voice, or a contribution.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="results" class="section">
-    <div class="container">
-      <h2>Results that matter</h2>
-      <p class="lead">
-        This section is a strong start. We’ll work with district staff to sharpen the numbers, dates, and visuals for maximum impact.
-      </p>
-
-      <div class="cards-4" role="list">
-        <div class="tile" role="listitem">
-          <div class="icon" aria-hidden="true">📈</div>
-          <div>
-            <h3>Student results improving</h3>
-            <p>First real momentum in years.</p>
-          </div>
-        </div>
-
-        <div class="tile" role="listitem">
-          <div class="icon" aria-hidden="true">👩‍🏫</div>
-          <div>
-            <h3>Teacher pay up</h3>
-            <p>Salaries increased about 30% over 3 years.</p>
-          </div>
-        </div>
-
-        <div class="tile" role="listitem">
-          <div class="icon" aria-hidden="true">🏅</div>
-          <div>
-            <h3>Recognition earned</h3>
-            <p>Statewide and national awards.</p>
-          </div>
-        </div>
-
-        <div class="tile" role="listitem">
-          <div class="icon" aria-hidden="true">🧾</div>
-          <div>
-            <h3>Better fiscal oversight</h3>
-            <p>Tighter accountability and smarter spending.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="priorities" class="section">
-    <div class="container">
-      <h2>My priorities</h2>
-      <p class="lead">Clear goals. Measurable progress. A board that keeps the focus on students.</p>
-
-      <div class="grid-2">
-        <div class="card">
-          <ol class="list" style="color:var(--text); font-weight:800; padding-left:18px; margin:0;">
-            <li><span style="font-weight:800;">Student achievement and high expectations</span></li>
-            <li><span style="font-weight:800;">Support and respect for great teachers</span> <span style="color:var(--muted); font-weight:600;">(pay, retention, resources)</span></li>
-            <li><span style="font-weight:800;">Fiscal discipline and transparency</span> <span style="color:var(--muted); font-weight:600;">(every dollar tied to outcomes)</span></li>
-            <li><span style="font-weight:800;">Real-life readiness</span> <span style="color:var(--muted); font-weight:600;">(literacy, math, skills)</span></li>
-            <li><span style="font-weight:800;">Governance that works</span> <span style="color:var(--muted); font-weight:600;">(policy, goals, accountability)</span></li>
-          </ol>
-        </div>
-
-        <div class="card">
-          <div class="ph-wide">
-            PHOTO PLACEHOLDER: Keith working with students/teachers/community<br/>
-            <span class="small">(Replace with an action photo.)</span>
-          </div>
-          <p class="small" style="margin:10px 0 0; color:var(--muted);">
-            Tip: Use real, local photos (classroom visits, school events, community partners). People trust what they can see.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Keith</h2>
-      <p class="lead">A lifelong public education advocate, focused on results over rhetoric.</p>
-
-      <div class="grid-2">
-        <div class="card">
-          <p style="margin:0; color:var(--muted);">
-            Keith S. Grybowski is the elected Charleston County School Board Trustee for District 1 (Mount Pleasant)
-            and a 30-year resident of Mount Pleasant. He is a lifelong advocate for public education.
-            Recently retired (for the third time), he spent 15 years at Patriots Point Naval &amp; Maritime Museum as
-            Director of Education, developing hands-on, interactive learning experiences used by schools across South Carolina.
-            <br/><br/>
-            Through continued nonprofit work with ECMSP and statewide classroom partnerships, he has helped serve more than
-            a million students over three decades.
-          </p>
-        </div>
-
-        <div class="card">
-          <p style="margin:0; color:var(--muted);">
-            He created and contributed to the widely distributed <em>Harry I Was, Oscar I Am</em> reading series,
-            with more than 500,000 copies placed in students’ hands—grounded in the belief that literacy, relevance,
-            and student motivation are the foundation of achievement.
-            <br/><br/>
-            Before education, he worked as a trial and corporate attorney and founded businesses in technology and worldwide shipping.
-            That experience strengthens his approach to governance, accountability, and fiscal stewardship.
-          </p>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:14px;">
-        <p style="margin:0; color:var(--muted);">
-          As a Trustee, Keith focuses on the Board’s core duties: hiring and evaluating the Superintendent, approving budgets,
-          adopting curriculum, and setting policy direction. As Board Policy Liaison, he is working with staff on responsible use of AI.
-          As the Board Representative with the District’s new Foundation, he helps raise additional support for student growth.
+  <header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <h1>Protect progress. Deliver results.</h1>
+        <p class="lead">
+          I’m Keith S. Grybowski, Charleston County School Board Trustee for District 1.
+          After 30+ years working with our school district—and the last four as a Trustee—our schools have made
+          some of the strongest progress we’ve seen: stronger results, stronger teacher support and retention,
+          and stronger financial stewardship.
           <br/><br/>
-          <strong style="color:var(--text);">He leads with a simple principle: results over rhetoric, students over politics.</strong>
+          I’m running to keep that momentum going and meet the next challenge: getting students to want to be in school
+          and helping parents trust the value our schools deliver.
         </p>
-      </div>
-    </div>
-  </section>
 
-  <section id="issues" class="section">
-    <div class="container">
-      <h2>Issues</h2>
-      <p class="lead">Plain-English priorities that match the school board’s real job.</p>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3 style="margin:0 0 8px;">Governance &amp; oversight</h3>
-          <p style="margin:0 0 10px; color:var(--muted);">
-            A school board trustee has a clear job:
-          </p>
-          <ul class="list">
-            <li>Hire and evaluate the Superintendent</li>
-            <li>Approve the budget and ensure financial controls</li>
-            <li>Adopt curriculum and set standards</li>
-            <li>Establish policies that govern the district</li>
-            <li>Monitor performance and require accountability</li>
-          </ul>
-          <p style="margin:10px 0 0; color:var(--muted);">
-            That’s the work I focus on, because governance is how you protect classrooms, support teachers, and prevent waste.
-          </p>
+        <div class="cta-row">
+          <a class="btn primary" href="support.html#join">Join the Campaign</a>
+          <a class="btn ghost" href="support.html#contribute">Support the Work</a>
+          <a class="btn ghost" href="support.html#volunteer">Volunteer</a>
         </div>
 
-        <div class="card">
-          <h3 style="margin:0 0 8px;">Fiscal accountability</h3>
-          <p style="margin:0; color:var(--muted);">
-            We can invest in teachers and students without losing control of spending.
-            Every program should be measured, and every contract should be defendable.
-          </p>
+        <div class="credline">Record of results. Clear priorities. Independent leadership.</div>
 
-          <h3 style="margin:14px 0 8px;">Academic focus</h3>
-          <p style="margin:0; color:var(--muted);">
-            Strong fundamentals—reading, writing, math—plus pathways that prepare students for college, career, or service.
-          </p>
-
-          <h3 style="margin:14px 0 8px;">Support for teachers</h3>
-          <p style="margin:0; color:var(--muted);">
-            Competitive pay is part of the solution. So are working conditions, discipline support, and respect for professional judgment.
-          </p>
-
-          <h3 style="margin:14px 0 8px;">Community trust</h3>
-          <p style="margin:0; color:var(--muted);">
-            Parents deserve transparency, consistency, and a board that listens.
-          </p>
+        <div class="notice" role="note">
+          <strong>Mobile-friendly:</strong> Built for phone users. Big buttons, simple pages, fast loading.
         </div>
       </div>
-    </div>
-  </section>
 
-  <section id="support" class="section">
-    <div class="container">
-      <h2>Support the campaign</h2>
-      <p class="lead">
-        This campaign is powered by neighbors who want strong schools and responsible leadership.
-        If you believe Charleston should stay on a path of progress—higher achievement, higher teacher pay, and better accountability—
-        please consider supporting this effort.
-      </p>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3 style="margin:0 0 10px;">Ways to help</h3>
-          <div class="cta-row">
-            <a class="btn primary" href="#contribute">Contribute</a>
-            <a class="btn ghost" href="#volunteer">Volunteer</a>
-            <a class="btn ghost" href="#host">Host a meet-and-greet</a>
-            <a class="btn ghost" href="#share">Share updates</a>
-          </div>
-          <p class="small" style="margin:8px 0 0; color:var(--muted);">
-            Even small contributions help us reach voters with facts, not noise.
-          </p>
+      <aside class="hero-card" aria-label="Campaign photo and highlights">
+        <div class="ph-img">
+          PHOTO PLACEHOLDER: Keith headshot<br/>
+          <span class="small">(Older gray-haired male headshot)</span>
         </div>
-
-        <div class="card">
-          <div class="ph-wide">
-            PHOTO PLACEHOLDER: Keith with community partners<br/>
-            <span class="small">(Replace with a “people” photo.)</span>
-          </div>
-          <p class="small" style="margin:10px 0 0; color:var(--muted);">
-            Compliance footer can go here: “Paid for by …” (as required).
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq" class="section">
-    <div class="container">
-      <h2>FAQ</h2>
-      <p class="lead">Short answers. Calm tone. Focus on students and results.</p>
-
-      <details>
-        <summary>Is this race partisan?</summary>
-        <p style="margin:10px 0 0; color:var(--muted);">
-          School board service should be about students, outcomes, and stewardship—not party labels.
-          I work with anyone committed to results and accountability.
-        </p>
-      </details>
-
-      <details>
-        <summary>Why are you being attacked?</summary>
-        <p style="margin:10px 0 0; color:var(--muted);">
-          When you tighten oversight and demand measurable results, some political and vendor-aligned interests get uncomfortable.
-          I’m focused on protecting progress and keeping the district moving forward.
-        </p>
-      </details>
-
-      <details>
-        <summary>How can I help?</summary>
-        <p style="margin:10px 0 0; color:var(--muted);">
-          Join the email list, share updates, volunteer, or contribute.
-        </p>
-      </details>
-    </div>
-  </section>
-
-  <section id="contact" class="section" style="border-bottom:none;">
-    <div class="container">
-      <h2>Join or contact</h2>
-      <p class="lead">
-        Want updates? Join the campaign list. Want to ask a question? Send a note.
-      </p>
-
-      <div class="grid-2">
-        <div id="join" class="card">
-          <h3 style="margin:0 0 8px;">Join the Campaign</h3>
-          <p class="small" style="margin:0 0 10px; color:var(--muted);">
-            Placeholder form (connect to Mailchimp/Action Network later).
-          </p>
-          <form onsubmit="event.preventDefault(); alert('Thanks! This demo form is not connected yet.');">
-            <div class="form-row">
-              <input type="text" name="name" placeholder="Your name" aria-label="Your name" />
-              <input type="email" name="email" placeholder="Your email" aria-label="Your email" required />
-            </div>
-            <div class="form-row">
-              <button class="btn primary" type="submit">Join the Campaign</button>
-              <a class="btn ghost" href="#volunteer">Volunteer</a>
-            </div>
-          </form>
-        </div>
-
-        <div class="card">
-          <h3 style="margin:0 0 8px;">Contact</h3>
-          <p class="small" style="margin:0 0 10px; color:var(--muted);">
-            Placeholder contact info. Add email/phone/social links here.
-          </p>
-
+        <div class="pad">
           <div class="mini">
-            <div><strong>Email:</strong> placeholder@email.com</div>
-            <div><strong>Phone:</strong> (555) 555-5555</div>
-            <div><strong>Facebook:</strong> @KeithGrybowski (placeholder)</div>
-            <div><strong>Instagram:</strong> @KeithGrybowski (placeholder)</div>
+            <div><strong>Current role:</strong> Trustee, District 1</div>
+            <div><strong>Home:</strong> Mount Pleasant (30-year resident)</div>
+            <div><strong>Focus:</strong> Results, teachers, responsible spending</div>
           </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<section id="why" class="section">
+  <div class="container">
+    <h2>Why I’m running</h2>
+    <p class="lead">Charleston County is on the right track—and we can’t afford to go backward.</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <p class="muted" style="margin:0;">
+          In the last four years, our district has made historic gains in academic momentum,
+          teacher support and retention, and financial stability. We’ve earned recognition across
+          the state and nationally because we’ve insisted on measurable results and responsible spending.
+          <br/><br/>
+          But progress attracts noise. When you demand accountability, some interests prefer the old way—
+          more politics, less transparency, and spending that doesn’t clearly benefit students.
+        </p>
+      </div>
+
+      <div class="card">
+        <p class="muted" style="margin:0;">
+          One clear difference in this race is leadership: I support strong, proven administration.
+          We fought hard to recruit and retain a homegrown Superintendent who is widely recognized for excellence,
+          and I won’t join efforts to undermine effective leadership for political reasons.
+          <br/><br/>
+          I’m running to keep our focus where it belongs—classrooms, teachers, and outcomes—and to tackle what’s next:
+          improving attendance and strengthening parent confidence in our schools.
+        </p>
+
+        <p style="margin:14px 0 0; font-weight:900;">
+          If you believe progress is worth protecting, I’d be honored to earn your support—
+          whether that’s your time, your voice, or a contribution.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="results" class="section">
+  <div class="container">
+    <h2>Results that matter</h2>
+    <p class="lead">We’ll refine the exact figures with district documentation for maximum impact. This is a strong start.</p>
+
+    <div class="cards-4" role="list">
+      <div class="tile" role="listitem">
+        <div class="icon" aria-hidden="true">📈</div>
+        <div>
+          <h3>Student results improving</h3>
+          <p>First real momentum in years.</p>
+        </div>
+      </div>
+
+      <div class="tile" role="listitem">
+        <div class="icon" aria-hidden="true">👩‍🏫</div>
+        <div>
+          <h3>Teacher pay up</h3>
+          <p>Salaries increased about 30% over 3 years.</p>
+        </div>
+      </div>
+
+      <div class="tile" role="listitem">
+        <div class="icon" aria-hidden="true">🏅</div>
+        <div>
+          <h3>Recognition earned</h3>
+          <p>Statewide and national awards.</p>
+        </div>
+      </div>
+
+      <div class="tile" role="listitem">
+        <div class="icon" aria-hidden="true">🧾</div>
+        <div>
+          <h3>Better fiscal oversight</h3>
+          <p>Tighter accountability and smarter spending.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section id="priorities" class="section">
+  <div class="container">
+    <h2>My priorities</h2>
+    <p class="lead">Clear goals. Measurable progress. A board that keeps the focus on students.</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <ol class="list" style="color:var(--text); font-weight:900; padding-left:18px; margin:0;">
+          <li>Student achievement and high expectations</li>
+          <li>Support and respect for great teachers <span class="muted" style="font-weight:700;">(pay, retention, resources)</span></li>
+          <li>Fiscal discipline and transparency <span class="muted" style="font-weight:700;">(every dollar tied to outcomes)</span></li>
+          <li>A curriculum that prepares students for real life <span class="muted" style="font-weight:700;">(literacy, math, skills)</span></li>
+          <li>Governance that works <span class="muted" style="font-weight:700;">(policy, goals, accountability)</span></li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <div class="ph-wide">
+          PHOTO PLACEHOLDER: Keith working with others<br/>
+          <span class="small">(Classroom / school visit / community partner)</span>
+        </div>
+        <p class="small" style="margin:10px 0 0;">
+          Tip: Use real local photos. People trust what they can see.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section" style="border-bottom:none;">
+  <div class="container">
+    <h2>Join or contact</h2>
+    <p class="lead">Want updates? Join the list. Want to ask a question? Send a note.</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3 style="margin:0 0 8px;">Join the Campaign</h3>
+        <p class="small" style="margin:0 0 10px;">This demo form is not connected yet. See support page for setup instructions.</p>
+
+        <form onsubmit="event.preventDefault(); demoSubmit('Thanks! This demo form is not connected yet.');">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" aria-label="Your name" />
+            <input type="email" name="email" placeholder="Your email" aria-label="Your email" required />
+          </div>
+          <div class="form-row" style="margin-top:12px;">
+            <button class="btn primary block" type="submit">Join the Campaign</button>
+            <a class="btn ghost block" href="support.html#volunteer">Volunteer</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3 style="margin:0 0 8px;">Contact</h3>
+        <p class="small" style="margin:0 0 10px;">Replace these with real contact links.</p>
+
+        <div class="mini">
+          <div><strong>Email:</strong> placeholder@email.com</div>
+          <div><strong>Phone:</strong> (555) 555-5555</div>
+          <div><strong>Facebook:</strong> @KeithGrybowski (placeholder)</div>
+          <div><strong>Instagram:</strong> @KeithGrybowski (placeholder)</div>
+        </div>
+
+        <div class="notice">
+          <strong>Fast response:</strong> Add a campaign email monitored daily and a Google Voice number for calls/texts.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="mobile-sticky" aria-label="Quick actions">
+    <div class="row">
+      <a class="btn ghost block" href="support.html#join">Join</a>
+      <a class="btn primary block" href="support.html#contribute">Support</a>
+    </div>
+  </div>
 
   <footer>
     <div class="container">
@@ -627,25 +242,26 @@
         <div>
           <strong>Keith S. Grybowski</strong><br/>
           <span class="small">Charleston County School Board • District 1 (Mount Pleasant)</span>
-          <p class="small" style="margin:10px 0 0; color:var(--muted);">
-            <strong>Compliance placeholder:</strong> Paid for by Friends of Keith Grybowski (example). Replace with your official committee language and address as required.
+          <p class="small" style="margin:10px 0 0;">
+            <strong>Compliance placeholder:</strong> Paid for by Friends of Keith Grybowski (example). Replace with your official committee language, address, and any required disclaimers.
           </p>
         </div>
         <div>
-          <strong>Pages (planned)</strong>
+          <strong>Quick links</strong>
           <ul class="list" style="margin-top:8px;">
-            <li>Home</li>
-            <li>About</li>
-            <li>Priorities / Issues</li>
-            <li>Support</li>
-            <li>Endorsements (later)</li>
-            <li>Volunteer</li>
-            <li>News / Updates</li>
+            <li><a href="support.html">Support / Donate</a></li>
+            <li><a href="fundraiser.html">Fundraiser page</a></li>
+            <li><a href="about.html">About Keith</a></li>
+            <li><a href="issues.html">Priorities / Issues</a></li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
 
+  <script>
+    // Demo-only: forms are not connected until you add your real provider URLs.
+    function demoSubmit(msg) { alert(msg); }
+  </script>
 </body>
 </html>
